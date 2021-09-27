@@ -29,8 +29,8 @@ if [ $EUID -eq 0 ]; then
 fi
 
 # verify the repo exists as expected in the home directory
-if [ ! -e "$HOME/raspberry-noaa-v2" ]; then
-  die "Please clone https://github.com/jekhokie/raspberry-noaa-v2 to your home directory"
+if [ ! -e "$HOME/stb-Noaa" ]; then
+  die "Please clone https://github.dev/yc5abk/stb-Noaa to your home directory"
 fi
 
 # check if this is a new install or an upgrade based on modprobe settings
@@ -56,7 +56,7 @@ else
 fi
 
 log_running "Installing Python dependencies..."
-sudo python3 -m pip install -r $HOME/raspberry-noaa-v2/requirements.txt
+sudo python3 -m pip install -r $HOME/stb-Noaa/requirements.txt
 if [ $? -eq 0 ]; then
   log_done "  Successfully aligned required Python packages!"
 else
@@ -92,7 +92,7 @@ else
   die "  No settings file detected - please copy config/settings.yml.sample to config/settings.yml and edit for your environment"
 fi
 
-log_running "Running Ansible to install and/or update your raspberry-noaa-v2..."
+log_running "Running Ansible to install and/or update your stb-Noaa..."
 ansible-playbook -i ansible/hosts --extra-vars "@config/settings.yml" ansible/site.yml
 if [ $? -eq 0 ]; then
   log_done "  Ansible apply complete!"
@@ -142,7 +142,7 @@ echo ""
 echo "-------------------------------------------------------------------------------"
 log_finished "CONGRATULATIONS!"
 echo ""
-log_finished "raspberry-noaa-v2 has been successfully installed/upgraded!"
+log_finished "stb-Noaa has been successfully installed/upgraded!"
 echo ""
 log_finished "You can view the webpanel updates by visiting the URL(s) listed in the"
 log_finished "'output web server url' and 'output web server tls url' play outputs above."
@@ -152,7 +152,7 @@ echo ""
 if [ $install_type == 'install' ]; then
   log_running "It looks like this is a fresh install of the tooling for captures."
   log_running "If you've never had the software tools installed previously (e.g. if you've"
-  log_running "not installed the original raspberry-noaa repo content), you likely need to"
+  log_running "not installed the original stb-Noaa repo content), you likely need to"
   log_running "restart your device. Please do this to rule out any potential issues in the"
   log_running "software and libraries that have been installed."
 fi
