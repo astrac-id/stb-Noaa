@@ -39,20 +39,20 @@
     group: pi
     mode: 0644
 
-- name: log directory for raspberry-noaa-v2 logs
+- name: log directory for stb-Noaa logs
   become: yes
   file:
-    path: /var/log/raspberry-noaa-v2
+    path: /var/log/stb-Noaa
     state: directory
     owner: pi
     group: pi
     mode: 0755
 
-- name: logrotate settings for raspberry-noaa-v2 logs
+- name: logrotate settings for stb-Noaa logs
   become: yes
   copy:
     src: logrotate-settings
-    dest: /etc/logrotate.d/raspberry-noaa-v2
+    dest: /etc/logrotate.d/stb-Noaa
     owner: root
     group: root
     mode: 0644
@@ -122,7 +122,7 @@
 - name: annotation file (sample for modification)
   copy:
     src: annotation.html.j2_file
-    dest: ~pi/raspberry-noaa-v2/config/annotation/annotation.html.j2
+    dest: ~pi/stb-Noaa/config/annotation/annotation.html.j2
     force: no
     owner: pi
     group: pi
@@ -131,7 +131,7 @@
 - name: annotation file image (sample for modification)
   copy:
     src: raspberry-noaa-v2-logo.png
-    dest: ~pi/raspberry-noaa-v2/config/annotation/raspberry-noaa-v2-logo.png
+    dest: ~pi/stb-Noaa/config/annotation/raspberry-noaa-v2-logo.png
     force: no
     owner: pi
     group: pi
