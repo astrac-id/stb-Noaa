@@ -1,5 +1,5 @@
 ---
-- name: install raspberry-noaa-v2 core
+- name: install stb-Noaa core
   hosts: core
   connection: local
   gather_facts: no
