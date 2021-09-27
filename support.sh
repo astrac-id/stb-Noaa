@@ -12,7 +12,7 @@ ARCH=$(uname -a)
 CPUS=$(lscpu | grep "CPU(s):" | awk '{print $2}')
 GIT_CHANGES=$(git diff --name-only)
 SDR_INFO=$(rtl_eeprom 2>&1)
-RPI_MODEL=$(cat /proc/device-tree/model | tr -d '\0')
+STB_MODEL=$(cat /proc/device-tree/model | tr -d '\0')
 DISK_LAYOUT=$(lsblk)
 DB_TABLES=$(sqlite3 db/panel.db "SELECT name FROM sqlite_master WHERE type='table' AND name NOT LIKE 'sqlite_%';")
 
@@ -22,7 +22,7 @@ echo "============================================="
 echo "Current local date/time: $(date -d @$START_TIME)"
 echo "Current date/time (ms):  ${START_TIME}"
 echo "Repo git hash:           ${LATEST_GIT_HASH}"
-echo "Raspberry Pi Model:      ${RPI_MODEL}"
+echo "STB Model:               ${STB_MODEL}"
 echo "Architecture:            ${ARCH}"
 echo "Num CPUs:                ${CPUS}"
 
