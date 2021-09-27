@@ -45,7 +45,7 @@ if [ $? -eq 0 ]; then
   log_done "  libncurses5 already installed!"
 else
   log_running "  libncurses5 not yet installed - installing..."
-  sudo apt -y install libncurses5 && apt --fix-broken install
+  sudo apt -y install libncurses5 && sudo apt --fix-broken install
   if [ $? -eq 0 ]; then
     log_done "    libncurses5 successfully installed!"
   else
