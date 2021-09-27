@@ -122,7 +122,7 @@ produce_noaa_pristine_histogram: false
 produce_polar_az_el_graph: false
 produce_polar_direction_graph: true
 ground_station_location: 'YC5ABK Ground Station'
-ground_station_location: 'Air Haji - OI08KC'
+antenna_info: 'Air Haji - OI08KC'
 show_sun_elevation: true
 show_pass_direction: true
 noaa_daytime_enhancements: 'ZA MCIR MCIR-precip MSA MSA-precip HVC-precip HVCT-precip HVC HVCT therm avi'
