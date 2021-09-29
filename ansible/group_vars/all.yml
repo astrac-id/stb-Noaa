@@ -1,8 +1,8 @@
 ---
 
-stb_user: "hadif"
-stb_owner: "hadif"
-stb_group: "hadif"
+stb_user: "yc5abk"
+stb_owner: "yc5abk"
+stb_group: "yc5abk"
 
 # available languages for webpanel (see "Lang" directory files)
 available_langs: [ ar, de, en, es, sr ]
