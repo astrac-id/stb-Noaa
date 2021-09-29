@@ -38,10 +38,10 @@
     state: present
     name: composer
 
-- name: add pi user to www-data group
+- name: add $USER user to www-data group
   become: yes
   user:
-    name: pi
+    name: "{{ stb_owner }}"
     groups: www-data
     append: yes
 
@@ -50,7 +50,7 @@
   file:
     path: "{{ web_home }}"
     state: directory
-    owner: pi
+    owner: "{{ stb_owner }}"
     group: www-data
     mode: 0775
 
@@ -59,7 +59,7 @@
   file:
     path: "{{ web_home }}/Config"
     state: directory
-    owner: pi
+    owner: "{{ stb_owner }}"
     group: www-data
     mode: 0775
 
@@ -68,7 +68,7 @@
   template:
     src: Config.php.j2
     dest: "{{ web_home }}/Config/Config.php"
-    owner: pi
+    owner: "{{ stb_owner }}"
     group: www-data
     mode: 0644
 
@@ -186,7 +186,7 @@
     name: nginx
     state: started
 
-- name: www-data sudoers atrm as pi user
+- name: www-data sudoers atrm as $USER user
   become: yes
   copy:
     src: 020_www-data-atrm-nopasswd
