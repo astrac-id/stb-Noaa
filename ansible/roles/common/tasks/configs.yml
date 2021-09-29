@@ -130,8 +130,8 @@
 
 - name: annotation file image (sample for modification)
   copy:
-    src: raspberry-noaa-v2-logo.png
-    dest: ~$USER/stb-Noaa/config/annotation/raspberry-noaa-v2-logo.png
+    src: stb-noaa-logo.png
+    dest: ~$USER/stb-Noaa/config/annotation/stb-noaa-logo.png
     force: no
     owner: "{{ stb_owner }}"
     group: "{{ stb_group }}"
