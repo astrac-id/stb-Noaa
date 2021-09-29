@@ -7,7 +7,7 @@ import os
 from envbash import load_envbash
 
 # load bash environment vars
-load_envbash('/home/pi/.noaa-v2.conf')
+load_envbash('/home/{{ stb_user }}/.stb_Noaa.conf')
 tz_offset = int(os.environ['TZ_OFFSET'])
 lat = str(os.environ['LAT'])
 lon = str(os.environ['LON'])
