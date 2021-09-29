@@ -101,7 +101,7 @@ else
 fi
 
 # source some env vars
-. "$HOME/.noaa-v2.conf"
+. "$HOME/.stb-Noaa.conf"
 
 # TLE data files
 # NOTE: This should be DRY-ed up with the scripts/schedule.sh script
