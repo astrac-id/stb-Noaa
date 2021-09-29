@@ -19,7 +19,7 @@
 TIMER_START=$(date '+%s')
 
 # import common lib and settings
-. "$HOME/.stb_Noaa.conf"
+. "$HOME/.stb-Noaa.conf"
 . "$NOAA_HOME/scripts/common.sh"
 capture_start=$START_DATE
 
