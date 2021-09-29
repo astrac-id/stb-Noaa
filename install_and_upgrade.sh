@@ -25,7 +25,7 @@ log_finished() {
 
 # run as a normal user
 if [ $EUID -eq 0 ]; then
-  die "Please run this script as the pi user (not as root)"
+  die "Please run this script as the stb user (not as root)"
 fi
 
 # verify the repo exists as expected in the home directory
