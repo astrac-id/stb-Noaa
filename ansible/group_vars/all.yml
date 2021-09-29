@@ -8,7 +8,7 @@ stb_group: "yc5abk"
 available_langs: [ ar, de, en, es, sr ]
 
 # root git clone directory (where functionality exists)
-noaa_home: "/home/"{{ stb_user }}"/stb-Noaa"
+noaa_home: "/home/{{ stb_user }}/stb-Noaa"
 
 # database file
 db_file: "{{ noaa_home }}/db/panel.db"
