@@ -1,9 +1,14 @@
 ---
+
+stb_user: "hadif"
+stb_owner: "hadif"
+stb_group: "hadif"
+
 # available languages for webpanel (see "Lang" directory files)
 available_langs: [ ar, de, en, es, sr ]
 
 # root git clone directory (where functionality exists)
-noaa_home: "/home/pi/stb-Noaa"
+noaa_home: "/home/"{{ stb_user }}"/stb-Noaa"
 
 # database file
 db_file: "{{ noaa_home }}/db/panel.db"
