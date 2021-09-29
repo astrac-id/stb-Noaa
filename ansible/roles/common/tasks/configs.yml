@@ -3,40 +3,40 @@
   template:
     src: noaa-v2.conf.j2
     dest: ~$USER/.noaa-v2.conf
-    owner: pi
-    group: pi
+    owner: "{{ stb_owner }}"
+    group: "{{ stb_group }}"
     mode: 0644
 
 - name: predict directory
   file:
     path: ~$USER/.predict
     state: directory
-    owner: pi
-    group: pi
+    owner: "{{ stb_owner }}"
+    group: "{{ stb_group }}"
     mode: 0755
 
 - name: predict config file
   template:
     src: predict.qth.j2
     dest: ~$USER/.predict/predict.qth
-    owner: pi
-    group: pi
+    owner: "{{ stb_owner }}"
+    group: "{{ stb_group }}"
     mode: 0644
 
 - name: wxtoimg config file
   template:
     src: wxtoimgrc.j2
     dest: ~$USER/.wxtoimgrc
-    owner: pi
-    group: pi
+    owner: "{{ stb_owner }}"
+    group: "{{ stb_group }}"
     mode: 0644
 
 - name: wxtoimg license terms acceptance file
   copy:
     src: wxtoimglic
     dest: ~$USER/.wxtoimglic
-    owner: pi
-    group: pi
+    owner: "{{ stb_owner }}"
+    group: "{{ stb_group }}"
     mode: 0644
 
 - name: log directory for stb-Noaa logs
@@ -44,8 +44,8 @@
   file:
     path: /var/log/stb-Noaa
     state: directory
-    owner: pi
-    group: pi
+    owner: "{{ stb_owner }}"
+    group: "{{ stb_group }}"
     mode: 0755
 
 - name: logrotate settings for stb-Noaa logs
@@ -61,24 +61,24 @@
   file:
     path: ~$USER/.gnuradio
     state: directory
-    owner: pi
-    group: pi
+    owner: "{{ stb_owner }}"
+    group: "{{ stb_group }}"
     mode: 0755
 
 - name: gnuradio prefs directory
   file:
     path: ~$USER/.gnuradio/prefs
     state: directory
-    owner: pi
-    group: pi
+    owner: "{{ stb_owner }}"
+    group: "{{ stb_group }}"
     mode: 0755
 
 - name: gnuradio prefs file
   copy:
     src: vmcircbuf_default_factory
     dest: ~$USER/.gnuradio/prefs/vmcircbuf_default_factory
-    owner: pi
-    group: pi
+    owner: "{{ stb_owner }}"
+    group: "{{ stb_group }}"
     mode: 0644
 
 - name: disable wifi power mgmt script
@@ -115,8 +115,8 @@
   file:
     path: ~$USER/config/annotation
     state: directory
-    owner: pi
-    group: pi
+    owner: "{{ stb_owner }}"
+    group: "{{ stb_group }}"
     mode: 0755
 
 - name: annotation file (sample for modification)
@@ -124,8 +124,8 @@
     src: annotation.html.j2_file
     dest: ~$USER/stb-Noaa/config/annotation/annotation.html.j2
     force: no
-    owner: pi
-    group: pi
+    owner: "{{ stb_owner }}"
+    group: "{{ stb_group }}"
     mode: 0600
 
 - name: annotation file image (sample for modification)
@@ -133,7 +133,7 @@
     src: raspberry-noaa-v2-logo.png
     dest: ~$USER/stb-Noaa/config/annotation/raspberry-noaa-v2-logo.png
     force: no
-    owner: pi
-    group: pi
+    owner: "{{ stb_owner }}"
+    group: "{{ stb_group }}"
     mode: 0600
 ...
