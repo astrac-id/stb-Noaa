@@ -30,7 +30,7 @@ fi
 
 # verify the repo exists as expected in the home directory
 if [ ! -e "$HOME/stb-Noaa" ]; then
-  die "Please clone https://github.dev/yc5abk/stb-Noaa to your home directory"
+  die "Please clone https://github.com/astrac-id/stb-Noaa to your home directory"
 fi
 
 # check if this is a new install or an upgrade based on modprobe settings
