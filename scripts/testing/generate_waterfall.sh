@@ -8,7 +8,7 @@
 # Example:
 #   ./generate_waterfall.sh scan.csv.gz
 
-. "$HOME/.noaa-v2.conf"
+. "$HOME/.stb-Noaa.conf"
 
 [ $# -lt 1 ] && echo "usage: $0 inputfile" && exit -1
 scriptpath="$( cd "$(dirname "$0")" >/dev/null 2>&1 ; pwd -P )"
