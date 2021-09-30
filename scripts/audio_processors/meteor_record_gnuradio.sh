@@ -10,7 +10,7 @@
 #   ./meteor_record_gnuradio.sh 15 /srv/audio/meteor/METEORM2.s
 
 # import common lib and settings
-. "$HOME/.stb_Noaa.conf"
+. "$HOME/.stb-Noaa.conf"
 . "$NOAA_HOME/scripts/common.sh"
 
 # input params
