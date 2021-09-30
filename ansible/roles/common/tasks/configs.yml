@@ -2,7 +2,7 @@
 - name: noaa environment variables
   template:
     src: stb-Noaa.conf.j2
-    dest: ~$USER/.noaa-v2.conf
+    dest: ~$USER/.stb-Noaa.conf
     owner: "{{ stb_owner }}"
     group: "{{ stb_group }}"
     mode: 0644
