@@ -33,7 +33,7 @@ export PASS_DIRECTION=$7
 export PASS_SIDE=$8
 
 # export some variables for use in the annotation - note that we do not
-# want to export all of .stb_Noaa.conf because it contains sensitive info
+# want to export all of .stb-Noaa.conf because it contains sensitive info
 export GAIN=$METEOR_M2_GAIN
 export SUN_MIN_ELEV=$METEOR_M2_SUN_MIN_ELEV
 export SDR_DEVICE_ID=$METEOR_M2_SDR_DEVICE_ID
