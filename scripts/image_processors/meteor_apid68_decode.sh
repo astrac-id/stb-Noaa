@@ -10,7 +10,7 @@
 #   ./meteor_apid68_decode.sh /path/to/input.dec /path/to/output.bmp
 
 # import common lib and settings
-. "$HOME/.stb_Noaa.conf"
+. "$HOME/.stb-Noaa.conf"
 . "$NOAA_HOME/scripts/common.sh"
 
 # input params
