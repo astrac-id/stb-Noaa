@@ -12,7 +12,7 @@
 #   ./meteor_normalize_annotate.sh /path/to/inputfile.jpg /path/to/outputfile.jpg
 
 # import common lib and settings
-. "$HOME/.stb_Noaa.conf"
+. "$HOME/.stb-Noaa.conf"
 . "$NOAA_HOME/scripts/common.sh"
 
 # input params
