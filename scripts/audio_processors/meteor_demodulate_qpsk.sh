@@ -10,7 +10,7 @@
 #   ./demodulate_meteor_qpsk.sh /path/to/input.qpsk /path/to/output.wav
 
 # import common lib and settings
-. "$HOME/.stb_Noaa.conf"
+. "$HOME/.stb-Noaa.conf"
 . "$NOAA_HOME/scripts/common.sh"
 
 # input params
