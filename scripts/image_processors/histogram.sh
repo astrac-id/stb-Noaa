@@ -12,7 +12,7 @@
 #   ./histogram.sh /path/to/inputfile.jpg /path/to/outputfile.jpg "my chart title" "my chart comment"
 
 # import common lib and settings
-. "$HOME/.stb_Noaa
+. "$HOME/.stb-Noaa
 .conf"
 . "$NOAA_HOME/scripts/common.sh"
 
