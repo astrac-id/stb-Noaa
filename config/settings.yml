@@ -121,14 +121,14 @@ produce_noaa_pristine_image: false
 produce_noaa_pristine_histogram: false
 produce_polar_az_el_graph: false
 produce_polar_direction_graph: true
-ground_station_location: 'YC5ABK Ground Station'
-antenna_info: 'Air Haji - OI08KC'
+ground_station_location: 'YC5ABK - AIR HAJI - INDONESIA'
+antenna_info: 'QFH and RTLSDR with STB HG680'
 show_sun_elevation: true
 show_pass_direction: true
 noaa_daytime_enhancements: 'ZA MCIR MCIR-precip MSA MSA-precip HVC-precip HVCT-precip HVC HVCT therm avi'
 noaa_nighttime_enhancements: 'ZA MCIR HVCT MCIR-precip therm avi'
 noaa_crop_toptobottom: true
-noaa_interpolate: false
+noaa_interpolate: true
 
 # noaa map configurations
 # http://usradioguy.com/wp-content/uploads/2020/05/wxtoimgcommand-line.pdf
